@@ -11,7 +11,7 @@
     --paper: #f2ede6;
     --accent: #c8401a;
     --dim: #8a8078;
-    --rule: #c8bfb0;
+    --rule: #f2ede6;
     --code-bg: #1a1a1a;
     --code-text: #e8e0d4;
   }
@@ -441,6 +441,32 @@
     footer { grid-template-columns: 1fr; }
     .nav-item { padding: 14px 18px; }
   }
+
+  @media print {
+    .nav { display: none; }
+
+    .cover { min-height: 100vh; break-after: page; }
+
+    .intro { break-after: page; }
+
+    .section-header { break-before: page; }
+
+    .sequences {
+      grid-template-columns: 1fr;
+      background: none;
+      gap: 0;
+    }
+
+    .sequence { break-inside: avoid; }
+
+    .sequence.featured {
+      grid-template-columns: 1fr;
+    }
+
+    .featured-diagram { display: none; }
+
+    footer { break-before: page; grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
@@ -462,7 +488,7 @@
         <!-- Grid -->
         <defs>
           <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#c8bfb0" stroke-width="0.5"/>
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#f2ede6" stroke-width="0.5"/>
           </pattern>
         </defs>
         <rect width="400" height="400" fill="url(#grid)"/>
@@ -470,7 +496,7 @@
         <rect x="40" y="60" width="140" height="100" stroke="#8a8078" stroke-width="1.5" stroke-dasharray="8 4" fill="none"/>
         <line x1="40" y1="110" x2="180" y2="110" stroke="#8a8078" stroke-width="0.5"/>
         <text x="110" y="88" font-family="Space Mono" font-size="9" fill="#8a8078" text-anchor="middle">OLD.OS</text>
-        <text x="110" y="128" font-family="Space Mono" font-size="8" fill="#c8bfb0" text-anchor="middle">v0.1 — DEPRECATED</text>
+        <text x="110" y="128" font-family="Space Mono" font-size="8" fill="#f2ede6" text-anchor="middle">v0.1 — DEPRECATED</text>
         <!-- Arrow -->
         <line x1="200" y1="110" x2="240" y2="110" stroke="#c8401a" stroke-width="2"/>
         <polygon points="240,105 252,110 240,115" fill="#c8401a"/>
@@ -498,9 +524,9 @@
         <text x="310" y="240" font-family="Space Mono" font-size="7" fill="#8a8078" text-anchor="middle">seq 25–32</text>
 
         <!-- Connecting lines -->
-        <line x1="100" y1="200" x2="120" y2="200" stroke="#c8bfb0" stroke-width="1"/>
-        <line x1="180" y1="200" x2="200" y2="200" stroke="#c8bfb0" stroke-width="1"/>
-        <line x1="260" y1="200" x2="280" y2="200" stroke="#c8bfb0" stroke-width="1"/>
+        <line x1="100" y1="200" x2="120" y2="200" stroke="#f2ede6" stroke-width="1"/>
+        <line x1="180" y1="200" x2="200" y2="200" stroke="#f2ede6" stroke-width="1"/>
+        <line x1="260" y1="200" x2="280" y2="200" stroke="#f2ede6" stroke-width="1"/>
 
         <!-- Output -->
         <rect x="120" y="310" width="160" height="50" fill="#0a0a0a"/>
@@ -533,391 +559,7 @@
   <p style="font-size:16px; color: var(--dim);">32 sequences. 4 phases. One complete rewrite.<br>From stuck in old thinking — to model-native.</p>
 </section>
 
-<!-- ══ SECTION 1: DELETE ══ -->
-<div id="delete" class="section-header">
-  <div class="section-code">01</div>
-  <div class="section-info">
-    <h2><span>//</span> DELETE</h2>
-    <p>Uninstalling the assumptions that no longer serve you. You cannot install new code on a corrupted system.</p>
-    <div class="section-range">Sequences 01 — 08</div>
-  </div>
-</div>
-
-<div class="sequences">
-  <div class="sequence featured">
-    <div>
-      <div class="sequence-top">
-        <span class="sequence-num">SEQ_01</span>
-      </div>
-      <h3>Your expertise is a ceiling, not a floor.</h3>
-      <p>The deeper your mastery of the old way, the harder it is to see the new one. The expert is often last to cross the threshold — not because they lack intelligence, but because they have too much invested in the current answer.</p>
-      <div class="sequence-bottom">
-        <span class="sequence-tag">DELETE · Expertise Trap</span>
-        <span class="sequence-visual"></span>
-      </div>
-    </div>
-    <div class="featured-diagram">
-      <svg width="240" height="240" viewBox="0 0 240 240" fill="none">
-        <rect x="1" y="1" width="238" height="238" stroke="#333" stroke-width="1"/>
-        <line x1="120" y1="20" x2="120" y2="220" stroke="#333" stroke-width="0.5"/>
-        <line x1="20" y1="120" x2="220" y2="120" stroke="#333" stroke-width="0.5"/>
-        <!-- Ceiling line -->
-        <line x1="40" y1="60" x2="200" y2="60" stroke="#c8401a" stroke-width="2" stroke-dasharray="6 3"/>
-        <text x="170" y="52" font-family="Space Mono" font-size="8" fill="#c8401a">CEILING</text>
-        <!-- Growth curve hitting ceiling -->
-        <path d="M 40 200 Q 80 180 110 120 Q 130 80 140 62" stroke="#f2ede6" stroke-width="2" fill="none"/>
-        <circle cx="140" cy="62" r="4" fill="#c8401a"/>
-        <!-- New path breaking through -->
-        <path d="M 140 62 Q 160 40 200 20" stroke="#c8401a" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
-        <text x="48" y="218" font-family="Space Mono" font-size="7" fill="#555">time</text>
-        <text x="24" y="48" font-family="Space Mono" font-size="7" fill="#555">mastery</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_02</span></div>
-    <h3>The map you're using was drawn for a different territory.</h3>
-    <p>Mental models are built from past experience. When the world changes faster than your model updates, you navigate confidently — in the wrong direction.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DELETE · Mental Models</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_03</span></div>
-    <h3>Certainty is a comfort. Accuracy is a discipline.</h3>
-    <p>We mistake confidence for correctness. The old paradigm rewards those who sound sure. The new one rewards those who are right — even when it's uncomfortable to say "I don't know yet."</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DELETE · False Certainty</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_04</span></div>
-    <h3>Busy is not productive. It is a very convincing disguise.</h3>
-    <p>The industrial age trained us to equate motion with value. Model-native thinking measures outputs, not effort. The question is never "did I work hard?" It's "did anything change?"</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DELETE · Productivity Myth</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_05</span></div>
-    <h3>Knowing more is not the same as thinking better.</h3>
-    <p>Information is no longer scarce. The bottleneck has moved — from access to synthesis, from data to judgment. Hoarding knowledge is an obsolete strategy.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DELETE · Knowledge Hoarding</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_06</span></div>
-    <h3>Your job title is not your identity.</h3>
-    <p>When you define yourself by what you do, you become fragile the moment that role changes. In a world of constant transformation, identity must be built on how you think — not what you know.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DELETE · Role Identity</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_07</span></div>
-    <h3>Disruption does not destroy. It devalues.</h3>
-    <p>Most of what you know still works. It just no longer commands a premium. The shift is not that your old skills are useless — it is that they are no longer sufficient.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DELETE · Disruption Fear</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_08</span></div>
-    <h3>Unlearning costs more than learning. Budget for it.</h3>
-    <p>We allocate time to acquire new skills, but almost no time to release old ones. The resistance to the new is almost always a refusal to let go of the old — not a failure of intelligence.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DELETE · Unlearning</span><span class="sequence-visual"></span></div>
-  </div>
-</div>
-
-<!-- ══ SECTION 2: DEBUG ══ -->
-<div id="debug" class="section-header">
-  <div class="section-code">02</div>
-  <div class="section-info">
-    <h2><span>//</span> DEBUG</h2>
-    <p>Finding where you're broken. You cannot fix what you refuse to see. This section is the audit.</p>
-    <div class="section-range">Sequences 09 — 16</div>
-  </div>
-</div>
-
-<div class="sequences">
-  <div class="sequence featured">
-    <div>
-      <div class="sequence-top"><span class="sequence-num">SEQ_09</span></div>
-      <h3>Every belief you hold is a hypothesis, not a fact.</h3>
-      <p>The moment you treat a belief as settled, you stop testing it. Model-native thinkers hold their own assumptions lightly — not from insecurity, but from intellectual honesty. The best thinkers are perpetually in beta.</p>
-      <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Belief Systems</span><span class="sequence-visual"></span></div>
-    </div>
-    <div class="featured-diagram">
-      <svg width="240" height="240" viewBox="0 0 240 240" fill="none">
-        <rect x="1" y="1" width="238" height="238" stroke="#333" stroke-width="1"/>
-        <!-- Loop diagram -->
-        <circle cx="120" cy="120" r="80" stroke="#333" stroke-width="1" stroke-dasharray="4 4"/>
-        <text x="120" y="90" font-family="Space Mono" font-size="8" fill="#f2ede6" text-anchor="middle">OBSERVE</text>
-        <text x="170" y="128" font-family="Space Mono" font-size="8" fill="#f2ede6" text-anchor="middle">TEST</text>
-        <text x="120" y="160" font-family="Space Mono" font-size="8" fill="#f2ede6" text-anchor="middle">REVISE</text>
-        <text x="68" y="128" font-family="Space Mono" font-size="8" fill="#f2ede6" text-anchor="middle">HOLD</text>
-        <!-- Arrows around loop -->
-        <path d="M 140 48 Q 190 70 198 110" stroke="#c8401a" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
-        <path d="M 198 130 Q 190 170 150 192" stroke="#c8401a" stroke-width="1.5" fill="none"/>
-        <path d="M 100 192 Q 50 170 42 130" stroke="#c8401a" stroke-width="1.5" fill="none"/>
-        <path d="M 42 110 Q 50 70 100 48" stroke="#c8401a" stroke-width="1.5" fill="none"/>
-        <text x="120" y="124" font-family="Space Mono" font-size="9" fill="#c8401a" text-anchor="middle">BETA</text>
-        <text x="120" y="138" font-family="Space Mono" font-size="7" fill="#555" text-anchor="middle">always</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_10</span></div>
-    <h3>Your blind spots are invisible to you by definition.</h3>
-    <p>The hardest bugs to find are the ones that don't throw errors — they just quietly produce the wrong output for years. Build systems to surface what you cannot see yourself.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Blind Spots</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_11</span></div>
-    <h3>Comfort is the leading indicator of stagnation.</h3>
-    <p>When everything feels smooth, nothing is growing. Friction is not a problem to be eliminated — it is often the signal that you are at the edge of your current model, which is exactly where growth begins.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Comfort Trap</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_12</span></div>
-    <h3>The emotion you avoid is usually the data you need.</h3>
-    <p>Frustration, confusion, and resistance are not signs of weakness. They are diagnostic signals — pointing directly at the gap between your current model and reality.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Emotional Data</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_13</span></div>
-    <h3>You cannot solve a problem at the level it was created.</h3>
-    <p>Most intractable problems persist not because solutions don't exist, but because we keep applying the same level of thinking that created them. The upgrade is always in the framing, not the fix.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Problem Framing</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_14</span></div>
-    <h3>Speed without direction is just fast failure.</h3>
-    <p>Efficiency is a multiplier. Multiply it by the wrong strategy and you arrive at the wrong destination faster. Debug the direction before you optimize the engine.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Misdirected Speed</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_15</span></div>
-    <h3>What you measure is what you optimize for — whether you intend to or not.</h3>
-    <p>Every metric is a choice. And every choice signals what the system values. Audit your metrics before they quietly shape everything downstream.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Metrics</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_16</span></div>
-    <h3>The question you didn't ask is usually the most important one.</h3>
-    <p>Every answer is bounded by the question that preceded it. The deepest bugs in human thinking are not wrong answers — they are unasked questions that no one even noticed were missing.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">DEBUG · Question Design</span><span class="sequence-visual"></span></div>
-  </div>
-</div>
-
-<!-- ══ SECTION 3: RECODE ══ -->
-<div id="recode" class="section-header">
-  <div class="section-code">03</div>
-  <div class="section-info">
-    <h2><span>//</span> RECODE</h2>
-    <p>Installing the new operating system. New syntax for thinking, deciding, and building in a model-native world.</p>
-    <div class="section-range">Sequences 17 — 24</div>
-  </div>
-</div>
-
-<div class="sequences">
-  <div class="sequence featured">
-    <div>
-      <div class="sequence-top"><span class="sequence-num">SEQ_17</span></div>
-      <h3>Think in systems, not in solutions.</h3>
-      <p>A solution fixes a symptom. A systems view changes the conditions that produce the symptom. Model-native thinkers do not ask "what is the answer?" They ask "what are the inputs, feedback loops, and second-order effects?" The solution then becomes obvious.</p>
-      <div class="sequence-bottom"><span class="sequence-tag">RECODE · Systems Thinking</span><span class="sequence-visual"></span></div>
-    </div>
-    <div class="featured-diagram">
-      <svg width="240" height="240" viewBox="0 0 240 240" fill="none">
-        <rect x="1" y="1" width="238" height="238" stroke="#333" stroke-width="1"/>
-        <!-- System diagram -->
-        <rect x="30" y="100" width="50" height="40" stroke="#c8401a" stroke-width="1.5" fill="none"/>
-        <text x="55" y="124" font-family="Space Mono" font-size="7" fill="#c8401a" text-anchor="middle">INPUT</text>
-        <rect x="95" y="80" width="50" height="80" stroke="#f2ede6" stroke-width="1.5" fill="none"/>
-        <text x="120" y="124" font-family="Space Mono" font-size="7" fill="#f2ede6" text-anchor="middle">SYSTEM</text>
-        <rect x="160" y="100" width="50" height="40" stroke="#c8401a" stroke-width="1.5" fill="none"/>
-        <text x="185" y="124" font-family="Space Mono" font-size="7" fill="#c8401a" text-anchor="middle">OUTPUT</text>
-        <!-- Arrows -->
-        <line x1="80" y1="120" x2="95" y2="120" stroke="#f2ede6" stroke-width="1.5"/>
-        <line x1="145" y1="120" x2="160" y2="120" stroke="#f2ede6" stroke-width="1.5"/>
-        <!-- Feedback loop -->
-        <path d="M 185 140 Q 185 185 120 185 Q 55 185 55 140" stroke="#c8401a" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
-        <text x="120" y="200" font-family="Space Mono" font-size="7" fill="#666" text-anchor="middle">feedback loop</text>
-        <!-- Second order -->
-        <line x1="185" y1="100" x2="185" y2="60" stroke="#555" stroke-width="1" stroke-dasharray="2 4"/>
-        <text x="185" y="52" font-family="Space Mono" font-size="7" fill="#555" text-anchor="middle">2nd order</text>
-      </svg>
-    </div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_18</span></div>
-    <h3>Probability is the new precision.</h3>
-    <p>Replace "this will happen" with "this is most likely." It is not weakness — it is honesty. Decisions made with calibrated probability beat decisions made with false certainty, every time, over time.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RECODE · Probabilistic Thinking</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_19</span></div>
-    <h3>The frame is the answer. Most people skip straight to the content.</h3>
-    <p>How you define a problem determines every solution you will ever find for it. Reframe the problem and an entirely new solution space opens up — one that was always there but invisible under the old framing.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RECODE · Problem Framing</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_20</span></div>
-    <h3>Iteration is not failure. It is the method.</h3>
-    <p>The prototype mindset treats every version as a step, not a verdict. You are not wrong when the first version doesn't work. You are working. The goal is not to be right — it is to converge on right, faster than anyone else.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RECODE · Iteration</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_21</span></div>
-    <h3>Synthesis is the new genius.</h3>
-    <p>In an age of information abundance, the rarest skill is not knowing more — it is connecting what is already known in ways no one else has. The synthesizer sees what the specialist misses.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RECODE · Synthesis</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_22</span></div>
-    <h3>Ask better questions. Everything else follows.</h3>
-    <p>The quality of your thinking is determined entirely by the quality of the questions you ask. A better question is not a sharper version of the same question — it is a different question entirely. Train this like a muscle.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RECODE · Question Design</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_23</span></div>
-    <h3>Models augment judgment. They do not replace it.</h3>
-    <p>A model is a mirror — it shows you patterns at scale you could never see alone. But mirrors do not decide. That is still yours. The most dangerous mistake of this era is outsourcing judgment to a tool that has none.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RECODE · Human + Model</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_24</span></div>
-    <h3>Your lived experience is training data no model has.</h3>
-    <p>Every scar, every failure, every moment of joy you've navigated — these are irreplaceable inputs. Do not abandon your intuition. Upgrade it. The goal is human intelligence sharpened by model intelligence, not replaced by it.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RECODE · Human Value</span><span class="sequence-visual"></span></div>
-  </div>
-</div>
-
-<!-- ══ SECTION 4: RUN ══ -->
-<div id="run" class="section-header">
-  <div class="section-code">04</div>
-  <div class="section-info">
-    <h2><span>//</span> RUN</h2>
-    <p>Living and leading from the new code. The rewrite means nothing until it changes how you show up — every day, in every room.</p>
-    <div class="section-range">Sequences 25 — 32</div>
-  </div>
-</div>
-
-<div class="sequences">
-  <div class="sequence featured">
-    <div>
-      <div class="sequence-top"><span class="sequence-num">SEQ_25</span></div>
-      <h3>You cannot drag people into a new paradigm. You can only make the new world so visible they want to cross over.</h3>
-      <p>Leadership in a paradigm shift is not persuasion — it is demonstration. Build the thing. Show the result. Embody the thinking. People move toward what they can see working, not toward what they are told to believe.</p>
-      <div class="sequence-bottom"><span class="sequence-tag">RUN · Leadership</span><span class="sequence-visual"></span></div>
-    </div>
-    <div class="featured-diagram">
-      <svg width="240" height="240" viewBox="0 0 240 240" fill="none">
-        <rect x="1" y="1" width="238" height="238" stroke="#333" stroke-width="1"/>
-        <!-- Threshold line -->
-        <line x1="120" y1="20" x2="120" y2="220" stroke="#333" stroke-width="1.5"/>
-        <text x="60" y="40" font-family="Space Mono" font-size="8" fill="#555" text-anchor="middle">OLD</text>
-        <text x="180" y="40" font-family="Space Mono" font-size="8" fill="#c8401a" text-anchor="middle">NEW</text>
-        <!-- People dots on left -->
-        <circle cx="60" cy="80" r="6" fill="#8a8078"/>
-        <circle cx="45" cy="110" r="6" fill="#8a8078"/>
-        <circle cx="75" cy="130" r="6" fill="#8a8078"/>
-        <circle cx="55" cy="160" r="6" fill="#8a8078"/>
-        <circle cx="80" cy="90" r="6" fill="#8a8078"/>
-        <!-- Leader on right -->
-        <circle cx="165" cy="120" r="8" fill="#c8401a"/>
-        <text x="165" y="148" font-family="Space Mono" font-size="7" fill="#c8401a" text-anchor="middle">YOU</text>
-        <!-- Arrow showing attraction -->
-        <path d="M 90 110 Q 105 110 112 115" stroke="#c8401a" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
-        <path d="M 90 130 Q 105 128 112 122" stroke="#c8401a" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
-      </svg>
-    </div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_26</span></div>
-    <h3>Adaptability is not a personality trait. It is a practice.</h3>
-    <p>You do not become adaptable by deciding to be. You become adaptable by building daily habits of exposure, reflection, and iteration until flexibility becomes your default state — not a response to crisis.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RUN · Adaptability</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_27</span></div>
-    <h3>Empathy cannot be automated. Double down on it.</h3>
-    <p>As models absorb more cognitive tasks, the irreducibly human skills command a higher premium. The ability to understand what another person feels — and act on it wisely — is the rarest and most durable competitive advantage of this era.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RUN · Human Edge</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_28</span></div>
-    <h3>Build your learning stack like a product, not an accident.</h3>
-    <p>Most people learn reactively — whatever they stumble into. Model-native thinkers design their inputs intentionally: what to read deeply, what to scan broadly, and what to experience directly. Curate your own curriculum.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RUN · Intentional Learning</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_29</span></div>
-    <h3>Culture changes one conversation at a time. Start yours.</h3>
-    <p>Paradigm shifts do not begin with policies or announcements. They begin with someone, somewhere, choosing to speak differently. You are not waiting for permission to introduce a new way of thinking — you are the permission.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RUN · Culture Change</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_30</span></div>
-    <h3>Wisdom is knowing when not to use the tool.</h3>
-    <p>Model-native does not mean model-dependent. The most powerful skill in a world of infinite tools is discernment — knowing when to reach for the model, and when to trust the irreplaceable texture of human judgment instead.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RUN · Discernment</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence">
-    <div class="sequence-top"><span class="sequence-num">SEQ_31</span></div>
-    <h3>The goal is not to master the new world. It is to stay curious enough to keep up with it.</h3>
-    <p>Mastery implies a destination. But in an era of continuous transformation, the highest achievement is not to arrive — it is to remain in motion. Curiosity is not a starting point. It is the entire journey.</p>
-    <div class="sequence-bottom"><span class="sequence-tag">RUN · Perpetual Motion</span><span class="sequence-visual"></span></div>
-  </div>
-
-  <div class="sequence featured">
-    <div>
-      <div class="sequence-top"><span class="sequence-num">SEQ_32</span></div>
-      <h3>The model doesn't replace you. It reveals you.</h3>
-      <p>Every tool you use becomes a mirror. In a world of powerful models, what they amplify — your curiosity or your laziness, your wisdom or your bias, your creativity or your rigidity — is entirely up to you. The Recode was never about the technology. It was always about who you choose to become.</p>
-      <div class="sequence-bottom"><span class="sequence-tag">RUN · The Rewrite Complete</span><span class="sequence-visual"></span></div>
-    </div>
-    <div class="featured-diagram">
-      <svg width="240" height="240" viewBox="0 0 240 240" fill="none">
-        <rect x="1" y="1" width="238" height="238" stroke="#333" stroke-width="1"/>
-        <!-- Mirror metaphor -->
-        <rect x="90" y="40" width="60" height="160" stroke="#c8401a" stroke-width="2" fill="none"/>
-        <!-- Human silhouette left -->
-        <circle cx="55" cy="80" r="12" stroke="#f2ede6" stroke-width="1.5" fill="none"/>
-        <line x1="55" y1="92" x2="55" y2="140" stroke="#f2ede6" stroke-width="1.5"/>
-        <line x1="55" y1="108" x2="35" y2="125" stroke="#f2ede6" stroke-width="1.5"/>
-        <line x1="55" y1="108" x2="75" y2="125" stroke="#f2ede6" stroke-width="1.5"/>
-        <line x1="55" y1="140" x2="40" y2="170" stroke="#f2ede6" stroke-width="1.5"/>
-        <line x1="55" y1="140" x2="70" y2="170" stroke="#f2ede6" stroke-width="1.5"/>
-        <!-- Reflection right (brighter) -->
-        <circle cx="185" cy="80" r="12" stroke="#c8401a" stroke-width="2" fill="none"/>
-        <line x1="185" y1="92" x2="185" y2="140" stroke="#c8401a" stroke-width="2"/>
-        <line x1="185" y1="108" x2="165" y2="125" stroke="#c8401a" stroke-width="2"/>
-        <line x1="185" y1="108" x2="205" y2="125" stroke="#c8401a" stroke-width="2"/>
-        <line x1="185" y1="140" x2="170" y2="170" stroke="#c8401a" stroke-width="2"/>
-        <line x1="185" y1="140" x2="200" y2="170" stroke="#c8401a" stroke-width="2"/>
-        <text x="120" y="218" font-family="Space Mono" font-size="7" fill="#666" text-anchor="middle">MIRROR</text>
-      </svg>
-    </div>
-  </div>
-</div>
+<div id="sequences-root"></div>
 
 <!-- FOOTER -->
 <footer>
@@ -935,7 +577,58 @@
   </div>
 </footer>
 
+<script src="content/sequences.js"></script>
+<script src="src/diagrams.js"></script>
 <script>
+  // Render sequences from data
+  (function () {
+    const root = document.getElementById('sequences-root');
+    RECODE_SECTIONS.forEach(section => {
+      const header = document.createElement('div');
+      header.id = section.id;
+      header.className = 'section-header';
+      header.innerHTML = `
+        <div class="section-code">${section.number}</div>
+        <div class="section-info">
+          <h2><span>//</span> ${section.code}</h2>
+          <p>${section.tagline}</p>
+          <div class="section-range">${section.range}</div>
+        </div>`;
+      root.appendChild(header);
+
+      const grid = document.createElement('div');
+      grid.className = 'sequences';
+      section.sequences.forEach(seq => {
+        const el = document.createElement('div');
+        el.className = 'sequence' + (seq.featured ? ' featured' : '');
+        if (seq.featured) {
+          el.innerHTML = `
+            <div>
+              <div class="sequence-top"><span class="sequence-num">${seq.id}</span></div>
+              <h3>${seq.title}</h3>
+              <p>${seq.body}</p>
+              <div class="sequence-bottom">
+                <span class="sequence-tag">${seq.tag}</span>
+                <span class="sequence-visual"></span>
+              </div>
+            </div>
+            <div class="featured-diagram">${seq.diagram && DIAGRAMS[seq.diagram] ? DIAGRAMS[seq.diagram] : ''}</div>`;
+        } else {
+          el.innerHTML = `
+            <div class="sequence-top"><span class="sequence-num">${seq.id}</span></div>
+            <h3>${seq.title}</h3>
+            <p>${seq.body}</p>
+            <div class="sequence-bottom">
+              <span class="sequence-tag">${seq.tag}</span>
+              <span class="sequence-visual"></span>
+            </div>`;
+        }
+        grid.appendChild(el);
+      });
+      root.appendChild(grid);
+    });
+  })();
+
   // Smooth scroll for nav
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
