@@ -2,7 +2,7 @@
 
 ## Source Code — MIT License
 
-Copyright © 2025 [Your Name]
+Copyright © 2025 Tolga Erkal
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of the **source code** in this repository (HTML, CSS, JavaScript rendering logic)
@@ -26,7 +26,7 @@ THE SOFTWARE.
 
 ## Content — All Rights Reserved
 
-Copyright © 2025 [Your Name]. All rights reserved.
+Copyright © 2025 Tolga Erkal. All rights reserved.
 
 The following are proprietary and protected under copyright law:
 
@@ -40,7 +40,7 @@ project **may NOT** be reproduced, distributed, translated, adapted, or used
 in any form — commercial or non-commercial — without explicit written
 permission from the author.
 
-To request permission: [your-email@domain.com]
+To request permission: tolgaerkal@gmail.com
 
 ---
 
