@@ -67,7 +67,7 @@ open index.html
 
 ## The Book
 
-**The Recode** is being developed as a fully illustrated book. If you are a publisher, illustrator, or collaborator interested in the project, reach out at: [your-email@domain.com]
+**The Recode** is being developed as a fully illustrated book. If you are a publisher, illustrator, or collaborator interested in the project, reach out at: [tolgaerkal@gmail.com]
 
 ---
 
@@ -84,8 +84,8 @@ Contributions to the **rendering engine and code** are welcome. Pull requests th
 
 ## Author
 
-**[Your Name]**  
-[your-website.com] · [LinkedIn] · [Twitter/X]
+**Tolga Erkal**  
+
 
 ---
 
