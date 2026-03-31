@@ -442,31 +442,6 @@
     .nav-item { padding: 14px 18px; }
   }
 
-  @media print {
-    .nav { display: none; }
-
-    .cover { min-height: 100vh; break-after: page; }
-
-    .intro { break-after: page; }
-
-    .section-header { break-before: page; }
-
-    .sequences {
-      grid-template-columns: 1fr;
-      background: none;
-      gap: 0;
-    }
-
-    .sequence { break-inside: avoid; }
-
-    .sequence.featured {
-      grid-template-columns: 1fr;
-    }
-
-    .featured-diagram { display: none; }
-
-    footer { break-before: page; grid-template-columns: 1fr; }
-  }
 </style>
 </head>
 <body>
